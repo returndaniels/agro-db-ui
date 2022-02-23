@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { Tractor } from '../models/tractor.model';
 import { read, create, update, remove } from "../utils/apiHandler";
 
-const baseUrl = 'https://agro-db-backend.herokuapp.com/tractors/';
+import constants from "../../assets/constants.json";
+
+const baseUrl = constants.tractorsEndpoint;
 
 @Injectable({
   providedIn: 'root'

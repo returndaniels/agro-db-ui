@@ -2,5 +2,6 @@
   "defaultImageUrl": "https://ik.imagekit.io/returndaniels/logo-agro-db_3-Tm1nl4m.jpg",
   "publicKey": "public_DCbUaQ/hVTj/7d7mf5UOafVT9kI=",
   "urlEndpoint": "https://ik.imagekit.io/returndaniels",
-  "authenticationEndpoint": "https://agro-db-backend.herokuapp.com/image/upload/auth"
+  "authenticationEndpoint": "https://agro-db-backend.herokuapp.com/image/upload/auth",
+  "tractorsEndpoint": "https://agro-db-backend.herokuapp.com/tractors/"
 }
