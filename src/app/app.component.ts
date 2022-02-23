@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { TractorService } from "./services/tractors.service";
 import { Tractor } from "./models/tractor.model";
+import { OneSignal } from 'onesignal-ngx';
 
 import  constants from "../assets/constants.json";
 
@@ -15,12 +16,16 @@ export class AppComponent implements OnInit {
 
   state: any = {};
 
-  constructor(private service: TractorService) {
+  constructor(private service: TractorService, private oneSignal: OneSignal) {
     this.state = {}
     this.state.modalIsOpen = false;
     this.state.detailsIsOpen = false;
     this.state.modalMode = 'Criar';
     this.state.focusTractor = {}
+
+    this.oneSignal.init({
+      appId: constants.oneSignalAppId,
+  });
    }
 
   ngOnInit(): void {
