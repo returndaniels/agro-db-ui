@@ -32,7 +32,10 @@ export class AppComponent implements OnInit {
     this.service
         .create(tractor)
         .then(response => this.tractors = [...this.tractors, response])
-        .catch(error => console.error(error))
+        .catch(error => {
+          console.error(error);
+          alert("Falha ao criar novo trator.");
+        })
   }
 
   editTractor  = (tractor: any) => {
@@ -46,7 +49,10 @@ export class AppComponent implements OnInit {
 
           this.closeModal();
         })
-        .catch(error => console.error(error))
+        .catch(error => {
+          console.error(error);
+          alert("Falha ao editar trator.");
+        })
   }
 
   removeTractor = (id: any, name: string) => {
@@ -56,7 +62,10 @@ export class AppComponent implements OnInit {
         this.tractors = this.tractors
           .filter((tractor: any) => tractor._id !== id )
       })
-      .catch(error => console.error(error))
+      .catch(error => {
+        console.error(error);
+        alert("Falha ao remover trator.");
+      })
   }
 
   openModal = (mode: string = 'c') => {

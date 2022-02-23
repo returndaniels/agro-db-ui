@@ -19,10 +19,6 @@
   margin: 1rem 0;
 }
 
-.tractor-attribute.name {
-  font-weight: 600;
-}
-
 .tractor-attribute.name:hover {
   color: blueviolet;
   cursor: pointer;
