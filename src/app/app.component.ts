@@ -25,7 +25,14 @@ export class AppComponent implements OnInit {
 
     this.oneSignal.init({
       appId: constants.oneSignalAppId,
-  });
+      notifyButton: {
+          enable: true
+      },
+    }).then(() => {
+      alert("sucesso")
+    }).catch(erro=>{
+      alert("falhas")
+    });
    }
 
   ngOnInit(): void {
