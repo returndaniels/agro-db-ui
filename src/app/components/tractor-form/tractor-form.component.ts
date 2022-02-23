@@ -13,6 +13,8 @@ export class TractorFormComponent implements OnInit {
   @Input() submitNewTractor: Function = () => {};
   @Input() editTractor: Function = () => {};
   @Input() closeModal: Function = () => {};
+  @Input() handleUploadSuccess: Function = () => {};
+  @Input() handleUploadError: Function = () => {};
   
   private name: string | null | undefined;
   private description: string | null | undefined;
@@ -21,7 +23,11 @@ export class TractorFormComponent implements OnInit {
   private modelYear: Date | string | Number | null | undefined;
   private value: string | number | null | undefined;
 
-  constructor() { }
+  imageName: string
+
+  constructor() {
+    this.imageName = this.getNowTime().toString() + '.jpeg'
+  }
 
   ngOnInit(): void {
       if(this.tractor) {
@@ -106,5 +112,15 @@ export class TractorFormComponent implements OnInit {
         value: this.value,
       })
     }
+  }
+
+  onUploadSuccess = (event: any) => {
+    this.imageUrl = event.url;
+    this.handleUploadSuccess(event);
+  }
+
+  getNowTime = () => {
+    const now = new Date();
+    return now.getTime();
   }
 }

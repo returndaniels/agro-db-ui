@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TractorService } from "./services/tractors.service";
 import { Tractor } from "./models/tractor.model";
 
+import  constants from "../assets/constants.json";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,7 +33,11 @@ export class AppComponent implements OnInit {
   submitNewTractor = (tractor: Tractor) => {
     this.service
         .create(tractor)
-        .then(response => this.tractors = [...this.tractors, response])
+        .then(response => {
+          const imageUrl = tractor.imageUrl || constants.defaultImageUrl
+          this.tractors = [...this.tractors, {...tractor, imageUrl}];
+          this.closeModal();
+        })
         .catch(error => {
           console.error(error);
           alert("Falha ao criar novo trator.");
@@ -111,5 +117,13 @@ export class AppComponent implements OnInit {
     if (confirm(`Você está prestes a remover o trator ${name}, permanentemente.`)) {
       this.removeTractor(id, name);
     }
+  }
+
+  handleUploadSuccess = (event: any) => {
+    this.state.focusTractor.imageUrl = event.url
+  }
+
+  handleUploadError = (event: any) => {
+    alert('Falha no upload da imagem')
   }
 }

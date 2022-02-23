@@ -61,3 +61,14 @@ button {
 .input-row label {
   width: 45%;
 }
+
+.current-url-p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 97%;
+}
+
+.current-url {
+  color: #435d7d;
+}

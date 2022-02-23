@@ -9,6 +9,9 @@ import { TractorFormComponent } from './components/tractor-form/tractor-form.com
 import { TractorDetailsComponent } from './components/tractor-details/tractor-details.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ImagekitioAngularModule } from 'imagekitio-angular';
+
+import constants from '../assets/constants.json';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ImagekitioAngularModule.forRoot({
+      publicKey: constants.publicKey,
+      urlEndpoint: constants.urlEndpoint,
+      authenticationEndpoint: constants.authenticationEndpoint
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

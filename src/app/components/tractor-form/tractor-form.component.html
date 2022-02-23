@@ -67,12 +67,23 @@
 
     <label>
       <p>Imagem:</p>
-      <input 
-        #image
-        type="text"
-        [value]="getImageUrl()"
-        (change)="setImageUrl(image.value)"
-      />
+      <ik-upload 
+        [fileName]="imageName"
+        [useUniqueFileName]="false" 
+        [isPrivateFile]="false"
+        (onSuccess)="onUploadSuccess($event)" 
+        (onError)="handleUploadError($event)"
+      ></ik-upload>
+      <p class="current-url-p">
+        <a 
+          *ngIf="getImageUrl()" 
+          class="current-url" 
+          [href]="getImageUrl()"
+          target="_blank"
+        >
+          {{ getImageUrl() }}
+        </a>
+      </p>
     </label>
   </div>
 
