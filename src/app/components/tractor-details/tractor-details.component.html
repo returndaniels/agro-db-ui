@@ -1,0 +1,86 @@
+<form>
+  <h1>{{ getName()}}</h1>
+  <label>
+    <p>Nome:</p>
+    <input 
+      #name
+      disabled
+      required
+      type="text"
+      placeholder="Trator E5"
+      [value]="" 
+    >
+  </label>
+
+  <div class="input-row">
+    <label>
+      <p>Modelo:</p>
+      <input 
+        #model
+        disabled
+        required
+        type="text"
+        placeholder="E5"
+        [value]="getModel()"
+      />
+    </label>
+
+    <label>
+      <p>Ano:</p>
+      <input 
+        #modelYear
+        disabled
+        type="text"
+        placeholder="2005"
+        [value]="getModelYear()"
+      />
+    </label>
+  </div>
+
+
+  <label>
+    <p>Descrição:</p>
+    <textarea
+      #description
+      disabled
+      rows="2"
+      minRows="2"
+      maxRows="6"
+      placeholder="Descrição do produto"
+      [value]="getDescription()"
+    ></textarea>
+  </label>
+
+  <div class="input-row">
+    <label>
+      <p>Preço (BRL):</p>
+      <input 
+        #price
+        disabled
+        type="number"
+        placeholder="250.000"
+        min="0"
+        step="any"
+        [value]="getPrice()"
+      />
+    </label>
+
+    <label>
+      <p>Imagem:</p>
+      <a title="Abrir imagem em nova aba" [href]="getImageUrl()" class="img-container" target="_blank">
+        <img [src]="getImageUrl()" alt="image">
+      </a>
+    </label>
+  </div>
+
+
+  <div class="input-row buttons">
+    <button 
+      type="button" 
+      class="btn-cancel" 
+      (click)="closeModal()"
+    >
+      Fechar
+    </button>
+    </div>
+</form>

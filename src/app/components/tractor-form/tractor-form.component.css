@@ -1,0 +1,63 @@
+form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 2rem 1.5rem;
+}
+
+input {
+  height: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+textarea {
+  height: 6rem;
+  margin-bottom: 1rem;
+  padding: .5rem 0;
+  width: 100%;
+  resize: none;
+}
+
+button {
+  padding: .8rem;
+  cursor: pointer;
+  margin: 1.5rem 0 0;
+  width: 45%;
+}
+
+.btn-cancel {
+  background: none;
+  background-color: white;
+  border: none;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .5);
+  border-radius: .8rem;
+}
+
+.btn-cancel:hover {
+  background-color: rgba(0, 0, 0, .08);
+}
+
+.btn-confirm {
+  background: none;
+  background-color: rgba(55, 167, 55, 1);
+  color: white;
+  border: none;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .5);
+  border-radius: .8rem;
+}
+
+.btn-confirm:hover {
+  background-color: rgba(55, 167, 55, .8);
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-row label {
+  width: 45%;
+}

@@ -1,0 +1,42 @@
+<div class="content" role="main">
+  <app-toolbar [openModal]="openModal"></app-toolbar>
+
+  <div class="tractor-list" >
+    <div class="tractor-head">
+      <b class="tractor-attribute-name">Nome</b>
+      <b class="tractor-attribute-name">Modelo</b>
+      <b class="tractor-attribute-name">Ano</b>
+      <b class="tractor-attribute-name">Preço</b>
+      <b class="tractor-attribute-name">Ações</b>
+    </div>
+    
+    <app-tractor
+      class="tractor"
+      *ngFor="let tractor of tractors;" 
+      [tractor]="tractor"
+      [openDetails]="openDetails"
+      [onEdit]="onEdit"
+      [onRemove]="onRemove"
+    ></app-tractor>
+  </div>
+
+
+  <div *ngIf="state.detailsIsOpen" class="modal">
+    <app-tractor-details
+      class="form"
+      [closeModal]="closeDetails"
+      [tractor]="state.focusTractor"
+    ></app-tractor-details>
+  </div>
+
+  <div *ngIf="state.modalIsOpen" class="modal">
+    <app-tractor-form
+      class="form"
+      [mode]="this.state.modalMode"
+      [submitNewTractor]="submitNewTractor"
+      [editTractor]="editTractor"
+      [closeModal]="closeModal"
+      [tractor]="state.focusTractor"
+    ></app-tractor-form>
+  </div>
+<router-outlet></router-outlet>

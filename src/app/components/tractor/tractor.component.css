@@ -1,0 +1,58 @@
+.tractor {
+  display: flex;
+  font-size: 1.2rem;
+  flex-wrap: nowrap;
+  width: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.tractor:hover {
+  background-color: rgba(0, 0, 0, 0.07)
+}
+
+.tractor-attribute {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 20%;
+  margin: 1rem 0;
+}
+
+.tractor-attribute.name {
+  font-weight: 600;
+}
+
+.tractor-attribute.name:hover {
+  color: blueviolet;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .tractor {
+    flex-wrap: wrap;
+  }
+
+  .tractor-attribute {
+    width: 100%;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons img {
+  height: 2rem;
+  opacity: .8;
+}
+
+.buttons img:hover {
+  opacity: 1;
+}
+
+.buttons .button {
+  cursor: pointer;
+  margin: .5rem;
+}

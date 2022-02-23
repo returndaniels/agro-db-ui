@@ -1,0 +1,95 @@
+<form>
+  <h1>{{ mode }} trator</h1>
+  <label>
+    <p>*Nome:</p>
+    <input 
+      #name
+      required
+      type="text"
+      placeholder="Trator E5"
+      [value]="getName()" 
+      (change)="setName(name.value)"
+    >
+  </label>
+
+  <div class="input-row">
+    <label>
+      <p>*Modelo:</p>
+      <input 
+        #model
+        required
+        type="text"
+        placeholder="E5"
+        [value]="getModel()"
+        (change)="setModel(model.value)"
+      />
+    </label>
+
+    <label>
+      <p>Ano:</p>
+      <input 
+        #modelYear
+        type="text"
+        placeholder="2005"
+        [value]="getModelYear()"
+        (change)="setModelYear(modelYear.value)"
+      />
+    </label>
+  </div>
+
+
+  <label>
+    <p>Descrição:</p>
+    <textarea
+      #description
+      rows="2"
+      minRows="2"
+      maxRows="6"
+      placeholder="Descrição do produto"
+      [value]="getDescription()"
+      (change)="setDescription(description.value)"
+    ></textarea>
+  </label>
+
+  <div class="input-row">
+    <label>
+      <p>Preço (BRL):</p>
+      <input 
+        #price
+        type="number"
+        placeholder="250.000"
+        min="0"
+        step="any"
+        [value]="getPrice()"
+        (change)="setPrice(price.value)"
+      />
+    </label>
+
+    <label>
+      <p>Imagem:</p>
+      <input 
+        #image
+        type="text"
+        [value]="getImageUrl()"
+        (change)="setImageUrl(image.value)"
+      />
+    </label>
+  </div>
+
+  <div class="input-row">
+    <button 
+      type="button" 
+      class="btn-cancel" 
+      (click)="closeModal()"
+    >
+      Cancelar
+    </button>
+    <button 
+      type="button" 
+      class="btn-confirm" 
+      (click)="submit($event)"
+    >
+      Confirmar
+    </button>
+    </div>
+</form>
