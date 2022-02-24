@@ -4,5 +4,5 @@
   "urlEndpoint": "https://ik.imagekit.io/returndaniels",
   "authenticationEndpoint": "https://agro-db-backend.herokuapp.com/image/upload/auth",
   "tractorsEndpoint": "https://agro-db-backend.herokuapp.com/tractors/",
-  "oneSignalAppId": "a4f73eeb-83e3-48b3-8d67-bc7874bfc4f9"
+  "oneSignalAppId": "30463e00-1f1b-45a0-ac29-02525de7aebe"
 }
