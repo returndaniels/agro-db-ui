@@ -28,10 +28,6 @@ export class AppComponent implements OnInit {
       notifyButton: {
           enable: true
       },
-    }).then(() => {
-      alert("sucesso")
-    }).catch(erro=>{
-      alert("falhas")
     });
    }
 
