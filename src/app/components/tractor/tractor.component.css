@@ -4,6 +4,7 @@
   flex-wrap: nowrap;
   width: 100%;
   transition: all .3s ease-in-out;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .tractor:hover {
@@ -16,12 +17,30 @@
   justify-content: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 20%;
-  margin: 1rem 0;
+}
+
+.tractor-attribute.name {
+  margin-left: 1rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: .5px;
+  text-underline-offset: 6px;
 }
 
 .tractor-attribute.name:hover {
   color: blueviolet;
   cursor: pointer;
+}
+
+.tractor-attribute img {
+  margin-left: .5rem;
+  height: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  .tractor-attribute {
+    margin: 1rem 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -31,6 +50,7 @@
 
   .tractor-attribute {
     width: 100%;
+    margin: 0.5rem 0;
   }
 }
 

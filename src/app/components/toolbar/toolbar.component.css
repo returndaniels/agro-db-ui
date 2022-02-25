@@ -20,10 +20,6 @@
   font-weight: 200;
 }
 
-.toolbar img {
-  margin: 0 1rem;
-}
-
 .toolbar #twitter-logo {
   height: 40px;
   margin: 0 8px;
@@ -61,4 +57,32 @@ button img {
   height: 1.5rem;
   margin-right: .5rem;
   margin-left: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .toolbar img {
+    margin: 0 1rem;
+  }
+
+  button .add {
+    display: none;
+  }
+
+  button .add-text {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  button img {
+    margin: .5rem;
+  }
+
+  button .add {
+    display: block;
+  }
+
+  button .add-text {
+    display: none;
+  }
 }

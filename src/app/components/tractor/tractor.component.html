@@ -1,8 +1,11 @@
 <div class="tractor">
-  <p class="tractor-attribute name" (click)="openDetails(tractor)">{{ name }}</p>
+  <p class="tractor-attribute name" (click)="openDetails(tractor)">
+    {{ name }} 
+    <img src="../../../assets/link-icon.svg"/>
+  </p>
   <p class="tractor-attribute">{{ model }}</p>
   <p class="tractor-attribute">{{ modelYear }}</p>
-  <p class="tractor-attribute">{{ tractor.value || '-' }}</p>
+  <p class="tractor-attribute">{{ tractor.value || '-' }} BRL</p>
 
   <div class="tractor-attribute buttons">
     <div class="button" (click)="onEdit(tractor)">

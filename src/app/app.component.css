@@ -1,6 +1,7 @@
 * {
   color: #435d7d;
   overflow-x: hidden;
+  margin: 0;
 }
 
 .modal {
@@ -56,4 +57,10 @@
   .tractor-attribute {
     width: 100%;
   }
+
+
+.tractor-head {
+  display: none;
+}
+
 }
