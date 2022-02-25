@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
         })
         .catch(error => {
           console.error(error);
-          alert("Falha ao criar novo trator.");
+          alert("Falha ao criar novo trator.\n\n message: " + error.message);
         })
   }
 
@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
         })
         .catch(error => {
           console.error(error);
-          alert("Falha ao editar trator.");
+          alert("Falha ao editar trator.\n\n message: " + error.message);
         })
   }
 
@@ -78,7 +78,7 @@ export class AppComponent implements OnInit {
       })
       .catch(error => {
         console.error(error);
-        alert("Falha ao remover trator.");
+        alert("Falha ao remover trator.\n\n message: " + error.message);
       })
   }
 
