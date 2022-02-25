@@ -89,6 +89,7 @@ export class TractorFormComponent implements OnInit {
   }
 
   submit = (event : any) => {
+    event.preventDefault();
     event.stopPropagation();
     
     if(this.mode !== 'Editar') {

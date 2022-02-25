@@ -1,4 +1,4 @@
-<form>
+<form (submit)="submit($event)">
   <h1>{{ mode }} trator</h1>
   <label>
     <p>*Nome:</p>
@@ -9,6 +9,7 @@
       placeholder="Trator E5"
       [value]="getName()" 
       (change)="setName(name.value)"
+      [disabled]="mode == 'Editar'"
     >
   </label>
 
@@ -95,11 +96,7 @@
     >
       Cancelar
     </button>
-    <button 
-      type="button" 
-      class="btn-confirm" 
-      (click)="submit($event)"
-    >
+    <button class="btn-confirm">
       Confirmar
     </button>
     </div>
