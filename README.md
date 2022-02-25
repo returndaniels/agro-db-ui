@@ -1,5 +1,10 @@
 # AgroDbUi
 
+<div align="center">
+<img src="./.github/logo.png" width=250  align="center">
+</br></br></br>
+</div>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
 Project running in [http://dujeawpw4wh5g.cloudfront.net/](http://dujeawpw4wh5g.cloudfront.net/)
